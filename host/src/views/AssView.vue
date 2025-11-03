@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import DikCounter from 'dikApp/DikCounter'
+import ReactComponentWrapper from '@/components/ReactComponentWrapper.vue'
+import { DikCounter } from 'dikApp/DikCounter'
 </script>
 
 <template>
-  <DikCounter />
+  <ReactComponentWrapper :component="DikCounter" :component-props="{initialValue: 1, isBig: true}" />
 </template>

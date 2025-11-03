@@ -1,5 +1,5 @@
 import './App.css'
-import DikCounter from "./components/DikCounter/DikCounter.tsx";
+import {DikCounter} from "./components/DikCounter/DikCounter.tsx";
 
 function App() {
   return (

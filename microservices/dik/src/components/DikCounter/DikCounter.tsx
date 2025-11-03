@@ -1,17 +1,16 @@
-import {useState} from 'react';
+import { useState } from 'react'
 
-const DikCounter = () => {
-  const [count, setCount] = useState(0)
+type DikCounterProps = {
+  initialValue?: number
+  isBig?: boolean
+}
 
-  const increment = () => {
-    setCount(count + 1)
-  }
+export function DikCounter({ initialValue = 0, isBig }: DikCounterProps) {
+  const [count, setCount] = useState(initialValue)
 
   return (
-    <button onClick={increment}>
+    <button onClick={() => setCount(count + 1)} style={{ fontSize: isBig ? '5rem' : '1.5rem' }}>
       🍆 count is {count}
     </button>
-  );
-};
-
-export default DikCounter;
+  )
+}
